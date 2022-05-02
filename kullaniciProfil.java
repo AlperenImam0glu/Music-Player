@@ -181,9 +181,6 @@ public class kullaniciProfil extends JFrame {
 				table_pop.setModel(modelim);
 				
 			
-				
-				
-				
 				sql_sorgu="SELECT calmalistesi_id,sanatci.sanatci_adi, sarki.sarki_adi, tur.tur_adi,sarki.sarki_id FROM sanatci,album,sarki,tur,calmalistelesi where sanatci.sanatci_id=album.sanatci_id \r\n"
 						+ "and  (sarki.album_id=album.album_id and album.album_tur = tur.tur_id) and calmalistelesi.sarki_id =sarki.sarki_id and calmalistelesi.tur_id =2 and calmalistelesi.kullanici_id ="+Kullanici_id+" order by sarki_id asc ;";
 				myRs= baglanti.yap(sql_sorgu);
